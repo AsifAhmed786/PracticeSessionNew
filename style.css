@@ -49,4 +49,15 @@
     width: 200px;
     height: 200px;
     background-color: yellow;
+    
+}
+.div4:hover{
+    background: grey;
+    border-radius: 20px;
+}
+
+
+ol{
+    list-style-type: circle;
+    list-style-position: inside;
 }
