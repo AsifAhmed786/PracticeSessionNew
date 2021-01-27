@@ -1,0 +1,23 @@
+.maindiv2{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.divfirst{
+    width: 200px;
+    height: 200px;
+    background-color: yellow; 
+    display: flex;
+   
+
+}
+
+.divsecond{
+    width: 200px;
+    height: 200px;
+    background-color: red; 
+    display: flex;
+
+
+}

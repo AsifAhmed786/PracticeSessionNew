@@ -49,11 +49,13 @@
     width: 200px;
     height: 200px;
     background-color: yellow;
+    box-shadow: 5px 5px 5px grey;
     
 }
 .div4:hover{
     background: grey;
     border-radius: 20px;
+    cursor: pointer;
 }
 a{
     text-decoration: none;
@@ -62,4 +64,10 @@ a{
 ol{
     list-style-type: circle;
     list-style-position: inside;
+}
+
+#imgbck{
+    background-image: url("https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2Fyc3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80");
+    width: 50%;
+    height: 100%;
 }

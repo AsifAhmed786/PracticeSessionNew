@@ -1,0 +1,39 @@
+.divfirst{
+    width: 200px;
+    height: 200px;
+    background-color: yellow;    
+    position: fixed;   
+    z-index: 1;
+    margin: 5px;
+}
+
+.divsecond{
+    width: 200px;
+    height: 200px;
+    background-color: yellowgreen; 
+    position: fixed;   
+}
+
+
+
+.first{
+    width: 200px;
+    height: 200px;
+    background-color: green;
+    float: left;
+}
+
+.second{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    float: left;
+}
+
+.third{
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    float: left;
+}
+
