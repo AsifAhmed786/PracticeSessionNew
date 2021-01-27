@@ -2,18 +2,21 @@
     width: 200px;
     height: 200px;
     background-color: red;
+    min-width: 200px;
 
 }
 .second{
     width: 200px;
     height: 200px;
     background-color: yellowgreen;
+    min-width: 200px;
 
 }
 
 .third{
     width: 200px;
     height: 200px;
-    background-color: red;
+    background-color: skyblue;
+    min-width: 200px;
 
 }
