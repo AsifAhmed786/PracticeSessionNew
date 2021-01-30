@@ -49,3 +49,9 @@ function readMore(){
     var p = document.getElementById("para")
     p.innerHTML = "Asif Ahmed is a bad boy and your are he badliest boy every i seen"
 }
+
+
+function hide(){
+    var img = document.getElementById("img1")
+    img1.className += " hidden"
+}
