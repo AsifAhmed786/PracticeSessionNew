@@ -1,0 +1,25 @@
+#main{
+    background-color: lightblue;
+    width: 400px;
+    height: 500px;
+    margin: 0 auto;
+    
+    justify-content: center;
+    border: 2px solid yellow;
+}
+
+#command{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+#task{
+    display: flex;
+    justify-content: center;
+}
+
+#todo{
+    margin-right: 5px;
+}
