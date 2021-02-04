@@ -1,0 +1,49 @@
+.body{
+    background-color: #c6ff00;
+}
+
+.userdiv{
+    padding-top: 50px;
+    position: absolute;
+    right: 10%;
+    top: 30%;
+    width: 30%;
+    height: 50%;
+    background-color: whitesmoke;
+    border-radius: 30px;
+}
+.btndiv{
+    margin-top: 10px;
+    text-align: center;
+      
+    /* margin: 0 auto; */
+    
+}
+
+.btn-success{
+    margin-left: 10px;
+}
+table{
+    margin: 0 auto;
+}
+
+th,td{
+    padding: 10px;
+}
+
+input{
+    border-radius: 10px;
+    outline-style: none;
+    border: 1px solid grey;
+}
+
+.imgdiv{
+    /* background-color: red; */
+    /* width: 50%; */
+}
+
+
+.mainhead{
+    position: absolute;
+    top: 0;
+}
