@@ -1,32 +1,40 @@
+*{
+    box-sizing: border-box;
+}
+
+
 .body{
     background-color: #c6ff00;
 }
-
 .userdiv{
-    padding-top: 50px;
-    position: absolute;
-    right: 10%;
-    top: 30%;
-    width: 30%;
-    height: 50%;
-    background-color: whitesmoke;
-    border-radius: 30px;
-}
-.btndiv{
-    margin-top: 10px;
-    text-align: center;
-      
-    /* margin: 0 auto; */
+    height: 100%px;
+    display: flex;
+    justify-content: center;
+    align-items: center !important;
+    
     
 }
 
-.btn-success{
-    margin-left: 10px;
-}
-table{
-    margin: 0 auto;
+.logindiv{
+    background-color: whitesmoke;
+    /* margin: 0 auto; */
+    /* margin-top: 30%; */
+    /* display: flex; */
+    
+    padding: 50px;
+    border-radius: 10px;
+    width: 400px;
 }
 
+.imgdiv{
+    max-width: 50%;
+    min-width: 50%;
+}
+
+table{
+    margin: 0 auto;
+    
+}
 th,td{
     padding: 10px;
 }
@@ -37,13 +45,17 @@ input{
     border: 1px solid grey;
 }
 
-.imgdiv{
-    /* background-color: red; */
-    /* width: 50%; */
-}
-
-
 .mainhead{
     position: absolute;
-    top: 0;
+    top: 0px;
+}
+
+.btn{
+    margin-top: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.imgwidth{
+    height: 100%px;
 }

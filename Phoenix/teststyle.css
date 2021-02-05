@@ -1,0 +1,29 @@
+body{
+    display: flex;
+    justify-content: center;    
+    /* align-items: center; */
+    height: 1000px;
+    /* justify-content: flex-end; */
+    /* align-items: flex-end; */
+    /* flex-wrap: wrap; */
+    /* justify-content: center; */
+    /* justify-content: right; */
+}
+
+
+.first{
+    width: 400px;
+    height: 400px;
+    background-color: red;
+}
+.second{
+    width: 400px;
+    height: 400px;
+    background-color: green;
+}
+
+.third{
+    width: 400px;
+    height: 400px;
+    background-color: yellow;
+}
