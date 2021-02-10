@@ -1,0 +1,45 @@
+.img{
+    width: 100%;
+}
+.userdiv{
+    background-color: #76ff03;
+}
+
+.userdiv{
+    width: 100%px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* vertical-align: middle; */
+}
+.userdata{
+    background-color: whitesmoke;
+    width: 400px;
+    min-width: 400px;
+    height: 250px;
+    margin: 0 auto;
+    /* padding: 50px; */
+    border-radius: 10px;
+    /* vertical-align: middle; */
+    /* display: flex; */
+    /* align-items: center; */
+}
+td,tr{
+    /* margin: 10px; */
+    padding: 10px;
+}
+table{
+    margin: 0 auto;
+}
+
+label{
+    text-align: right !important;
+}
+
+input{
+    border: none;
+    border-radius: 10px;    
+    height: 40px;
+    padding-left: 10px;
+    
+}
