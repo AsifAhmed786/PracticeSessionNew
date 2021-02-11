@@ -1,0 +1,60 @@
+bordy{
+    box-sizing: border-box;
+}
+
+.img1{
+    width: 100%px !important;
+}
+
+.tickdiv{
+    background-color: #79b700;
+    /* margin: 0 auto; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.usermain{
+    background-color: #aeea00;
+    display: flex;
+    align-items: center;
+    height: 600px;
+}
+.userdiv{
+    background-color: whitesmoke;
+    width: 400px;
+    border-radius: 10px;
+    padding: 40px;
+    margin: 0 auto;
+    
+}
+td,tr{
+    padding: 10px;
+}
+
+.inputf{
+    padding-left: 10px;
+    border-radius: 5px;
+    height: 35px;
+    border: none;
+}
+
+li{
+    display: inline;
+    /* padding-left: 0; */
+    
+}
+
+
+.awsome{
+    font-size: 30px !important;
+    padding: 5px;
+}
+
+.btn{
+    width: 80px;
+}
+
+.fa-check{
+    font-size: 200px !important;
+}
