@@ -1,0 +1,73 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: darkslategray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.btn-box{
+    /* position: relative; */
+    width: 80px;
+    height: 80px;
+    border: 3px solid whitesmoke;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    
+}
+
+.btn1{
+    width: 50px;
+    height: 6px;
+    background-color: whitesmoke;
+    /* transition: all .99s ease-in-out; */
+    box-shadow: 0 2px 5px rgba(255,101,47,.2);
+    border-radius: 5px;
+}
+
+
+.btn1::before,
+.btn1::after{
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 6px;
+    /* background-color: whitesmoke; */
+    background: #ffffff;
+    box-shadow: 0 2px 5px rgba(255,101,47,.2);
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+
+}
+
+.btn1::before{
+    transform: translateY(-18px);   /*translating main button with before and after translate location kahan par lagana hai existing element ko translate karne k baad*/
+
+}
+
+.btn1::after{
+    transform: translateY(18px);
+}
+
+.btn-box.open .btn1{
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+}
+
+.btn-box.open .btn1::before{
+    transform: rotate(45deg) translate(35px, -35px);    /*re-aligning cross lines*/
+}
+
+.btn-box.open .btn1::after{
+    transform: rotate(-45deg) translate(35px, 35px);    /*re-aligning cross lines*/
+}

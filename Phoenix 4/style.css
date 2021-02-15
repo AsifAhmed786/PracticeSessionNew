@@ -1,0 +1,27 @@
+.maindiv{
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* min-height: 600px; */
+    /* min-width: 400px; */
+    /* background-color: yellow; */
+}
+
+
+.contentdiv{
+    /* width: 80%; */
+    /* height: 100%; */
+    background-color: #1de9b6;
+   
+}
+
+.navi{
+    /* width: 20%; */
+    background-color: #00b686;
+    /* overflow: scroll; */
+    /* position: relative; */
+    position: sticky;
+    
+    top: 0px;
+    left: 0px;
+
+}
