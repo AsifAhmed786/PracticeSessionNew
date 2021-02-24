@@ -34,3 +34,17 @@ document.getElementById("btn_list").addEventListener("click",function(){
         console.log(i,commands[i])
     }
 })
+
+document.getElementById("btn_sort").addEventListener("click",function(){
+    var array1 = [9,4,8,1,3,2]
+    console.log(array1)
+    console.log(array1.sort(function(ax){
+        if(ax>5){
+            return ax
+        }
+        else{
+            return null;
+        }
+        
+    }))
+})
