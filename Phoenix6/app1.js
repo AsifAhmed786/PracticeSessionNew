@@ -85,14 +85,74 @@
 
 
 
-var command = ()=>{
-    // console.log(document.childNodes)
-    var text = document.getElementById("text")
-    var chat = document.getElementById("chat")
-    // console.log(text.value)
-    var textNode = document.createTextNode(text.value)
-    var chatElement = document.createElement("p")
-    chatElement.appendChild(textNode)
-    chat.appendChild(chatElement)
-    text.value = ""
+// var command = ()=>{
+//     // console.log(document.childNodes)
+//     var text = document.getElementById("text")
+//     var chat = document.getElementById("chat")
+//     // console.log(text.value)
+//     var textNode = document.createTextNode(text.value)
+//     var chatElement = document.createElement("p")
+//     chatElement.appendChild(textNode)
+//     chat.appendChild(chatElement)
+//     text
+// }
+
+
+// var user1 = {
+//     userName: "Asif",
+//     fatherName: "Ahmed",
+//     age:20
+// }
+
+// console.log(user1)
+// console.log(user1.userName)
+// console.log(user1.fatherName)
+// console.log(user1.city)
+// user1.city = "Karachi"
+// console.log(user1.city)
+
+// function user(name,fname,age){
+//     this.name = name;
+//     this.fname = fname;
+//     this.age = age;
+// }
+
+// var user2 = new user("Imran","Jamal",30)
+// console.log(user2)
+
+
+// let scope = ()=>{
+//     const name = "Asif"
+//     console.log(name)
+//     name = "Ahmed"
+    
+// }
+
+// scope();
+
+
+
+let student = {
+    studentName : "Asif",
+    fatherName : "Ahmed",
+    age : 40
 }
+
+
+let {studentName,fatherName,age} = student
+console.log(studentName)
+
+
+let array = ["asif","ahmed",40]
+let [name2,fname1,age1] = array
+console.log(name2)
+
+
+let userName = "Asif"
+let UserFatherName = "Ahmed"
+
+console.log(`My name is ${userName} and my father name is ${UserFatherName}`)
+
+var condition = 40;
+
+console.log(condition > 39 ? "yes" : "No")
