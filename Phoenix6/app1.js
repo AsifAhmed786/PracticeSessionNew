@@ -132,27 +132,74 @@
 
 
 
-let student = {
-    studentName : "Asif",
-    fatherName : "Ahmed",
-    age : 40
+// let student = {
+//     studentName : "Asif",
+//     fatherName : "Ahmed",
+//     age : 40
+// }
+
+
+// let {studentName,fatherName,age} = student
+// console.log(studentName)
+
+
+// let array = ["asif","ahmed",40]
+// let [name2,fname1,age1] = array
+// console.log(name2)
+
+
+// let userName = "Asif"
+// let UserFatherName = "Ahmed"
+
+// console.log(`My name is ${userName} and my father name is ${UserFatherName}`)
+
+// var condition = 40;
+
+// console.log(condition > 39 ? "yes" : "No")
+
+
+// var count = 0;
+// let timer = ()=>{
+//     count++;
+//     console.log(count)
+// }
+
+// var interval = setInterval(timer,1000)
+
+// setTimeout(function(){
+//     clearInterval(interval)
+//     console.log("timer out")
+// },5000)
+
+// function student(name1,age,fname){
+//     this.name1 = name1;
+//     this.age = age;
+//     this.fname = fname
+// }
+
+// var std1 = new student("Asif",40,"Ahmed")
+// console.log(std1)
+
+
+let arr = [{name: "Asif", age:40,fname:"Ahmed"},{name: "Imran", age:30,fname:"Jamal"},{name: "Hanif", age:50,fname:"Turk"}]
+
+
+let filter = arr.filter(a=>a.age>30)
+// console.log(filter)
+
+for(var i = 0; i < filter.length;i++){
+    console.log(filter[i].name)
 }
 
 
-let {studentName,fatherName,age} = student
-console.log(studentName)
+
+let arr2 = [100,345,20,554,400,200]
+var multiply = arr2.map(a1=> a1*2)
+console.log(multiply)
 
 
-let array = ["asif","ahmed",40]
-let [name2,fname1,age1] = array
-console.log(name2)
 
-
-let userName = "Asif"
-let UserFatherName = "Ahmed"
-
-console.log(`My name is ${userName} and my father name is ${UserFatherName}`)
-
-var condition = 40;
-
-console.log(condition > 39 ? "yes" : "No")
+let arr3 = [{name: "Asif", age:40,fname:"Ahmed"},{name: "Imran", age:30,fname:"Jamal"},{name: "Hanif", age:50,fname:"Turk"}]
+let result = arr3.map(a=>a.name="champion")
+console.log(arr3)
+console.log(result)
