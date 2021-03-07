@@ -1,20 +1,27 @@
-.container{
-    display: flex;
-    flex-wrap: wrap;
-}
 
+.main1{
+    /* display: flex;
+    flex-wrap: wrap; */
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .first{
-    height: 400px;
-    width: 50%;
-    min-width: 400px;
-    /* max-width: 1080px; */
-    /* max-width: 1080px; */
+    min-width: 200px;
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+}
+.second{
+    min-width: 200px;
+    width: 200px;
+    height: 200px;
     background-color: green;
 }
-
-.second{
-    height: 400px;
-    width: 50%;
-    min-width: 400px;
-    background-color:orange;
+.third{
+    min-width: 200px;
+    width: 200px;
+    height: 200px;
+    background-color: blue;
 }
