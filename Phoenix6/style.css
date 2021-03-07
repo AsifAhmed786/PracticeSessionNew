@@ -1,7 +1,6 @@
-
-.main1{
-    /* display: flex;
-    flex-wrap: wrap; */
+/* Example1 */
+/* 
+.main1{ 
     height: 100vh;
     display: flex;
     justify-content: space-between;
@@ -24,4 +23,38 @@
     width: 200px;
     height: 200px;
     background-color: blue;
+} */
+
+
+
+
+
+/* Example2 */
+/* .ex1,.ex2{
+    width: 200px;
+    height: 200px;
 }
+
+.ex1{
+    background-color: green;
+}
+.ex2{
+    /* position: absolute;
+    position: relative;
+    top: 10px;
+    left: 10px; */
+    /* position: fixed;
+    bottom: 10px;
+    right: 20px;*/
+    /* background-color: blue;
+    position: sticky;
+    top: 0;
+    left: 0;
+} */
+
+
+
+/* Example 3 */
+/* li{
+    display: inline;
+} */
