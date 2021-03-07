@@ -24,13 +24,54 @@
 // console.log(prmp)
 
 
-function submit_data(){
-    var email = document.getElementById("email")
-    var pass = document.getElementById("pass")
-    console.log(email.value,pass.value)
+// function submit_data(){
+//     var email = document.getElementById("email")
+//     var pass = document.getElementById("pass")
+//     console.log(email.value,pass.value)
+// }
+
+// var readmore = ()=>{
+//     var contentp = document.getElementById("contentp")
+//     contentp.innerHTML = "My name is asif my father name is Ahmed"
+// }
+
+
+
+// Example 5
+let name1 = "Ahmed"
+name1 = "Asif"
+console.log(name1)
+
+let fname = "Ahmed"
+
+console.log(`My name is ${name1} and my father name is ${fname}`)
+
+var student = {
+    name2:"Asif",
+    fname2:"Ahmed",
+    age:40
 }
 
-var readmore = ()=>{
-    var contentp = document.getElementById("contentp")
-    contentp.innerHTML = "My name is asif my father name is Ahmed"
-}
+
+let {name2,fname2,age} = student
+console.log(name2,fname2,age)
+
+
+var arr = ["karachi","peshawar","quetta"]
+
+
+var [city1,city2,city3] = arr;
+console.log(city1,city2,city3)
+
+
+var abc = 6;
+console.log(abc == 5 ? "Yes" : "No")
+
+
+
+let std1 = [{name:"Asif",fname:"Ahmed",age:40},{name:"imran",fname:"jamal",age:45},{name:"Hanif",fname:"Turk",age:46}]
+let filter = std1.filter((a)=>a.age>40)
+console.log(filter)
+
+
+
