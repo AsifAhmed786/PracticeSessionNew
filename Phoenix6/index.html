@@ -1,12 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-database.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyB4Gi3o0sB8e3zuakgMa2vaqDJY1huEUKo",
+            authDomain: "database-test-2c0d2.firebaseapp.com",
+            databaseURL: "https://database-test-2c0d2.firebaseio.com",
+            projectId: "database-test-2c0d2",
+            storageBucket: "database-test-2c0d2.appspot.com",
+            messagingSenderId: "564429582505",
+            appId: "1:564429582505:web:f7f1a7f3d56e62d3bbf9b8"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+
+
     <title>Final Practice</title>
 </head>
+
 <body>
     <!-- Example 1 -->
     <!-- <div class="main1">
@@ -44,7 +72,7 @@
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates ea veritatis nihil blanditiis distinctio libero unde, saepe odit labore aliquid iure laudantium tempore. Cupiditate, assumenda ducimus possimus tenetur accusantium fugiat.</p>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates ea veritatis nihil blanditiis distinctio libero unde, saepe odit labore aliquid iure laudantium tempore. Cupiditate, assumenda ducimus possimus tenetur accusantium fugiat.</p> -->
 
-    
+
 
 
     <!-- Example 3 -->
@@ -99,9 +127,15 @@
         <button onclick="submit_data()">Submit</button>
         <p id="contentp">my name is <a href="javascript:void(0)" onclick="readmore()">Readmore</a></p>
     </div> -->
-
+    <input type="text" id="name1">
+    <br>
+    <input type="text" id="fname">
+    <br>
+    <button onclick="sendData()">Submit data</button><br>
+    <button onclick="getData()">Get Data</button>
 
 
     <script src="app.js"></script>
 </body>
+
 </html>

@@ -76,32 +76,64 @@
 
 
 // Example 6
-var student = {
-    name:"Asif",
-    fname:"Ahmed",
-    age:40
-}
-console.log(student)
+// var student = {
+//     name:"Asif",
+//     fname:"Ahmed",
+//     age:40
+// }
+// console.log(student)
 
 
-function Car(make,model,price){
-    this.make = make;
-    this.model = model;
-    this.price = price
-}
+// function Car(make,model,price){
+//     this.make = make;
+//     this.model = model;
+//     this.price = price
+// }
 
-var car1 = new Car("Suzuki","Swift",2000000)
-console.log(car1)
+// var car1 = new Car("Suzuki","Swift",2000000)
+// console.log(car1)
 
 
-class Human{
-    constructor(gender,age,name1){
-        this.gender = gender;
-        this.age = age;
-        this.name1 = name1
+// class Human{
+//     constructor(gender,age,name1){
+//         this.gender = gender;
+//         this.age = age;
+//         this.name1 = name1
+//     }
+// }
+
+
+// var human1 = new Human("Male",50,"Aslam")
+// console.log(human1)
+
+
+
+let sendData = ()=>{
+    var std1 = {
+        name1:document.getElementById("name1").value,
+        fname:document.getElementById("fname").value
     }
+    console.log(std1)
+    let key1 = firebase.database().ref('users/').push().key
+    console.log(key1)
+    firebase.database().ref('users/').child(key1).set(std1)
+    .then(function(){
+        console.log("data transmitted succcessfully")
+    })
+    .catch(function(e){
+        console.log(e.message())
+    })
+    
 }
 
 
-var human1 = new Human("Male",50,"Aslam")
-console.log(human1)
+
+let getData = ()=>{
+    firebase.database().ref('users/').once("value",function(data){
+        let list = data.key
+        console.log(list)
+        // for(var i = 0; i<list.length;i++){
+        //     console.log(list[i])
+        // }
+    })
+}
