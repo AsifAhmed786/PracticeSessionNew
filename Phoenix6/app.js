@@ -108,49 +108,88 @@
 
 
 
-let sendData = ()=>{
-    var std1 = {
-        name1:document.getElementById("name1").value,
-        fname:document.getElementById("fname").value
-    }
-    // console.log(std1)
-    let key1 = firebase.database().ref('users/').push().key
-    // console.log(key1)
-    firebase.database().ref('users/').child(key1).set(std1)
-    .then(function(){
-        // console.log("data transmitted succcessfully")
-    })
-    .catch(function(e){
-        // console.log(e.message())
-    })    
-}
+// let sendData = ()=>{
+//     var std1 = {
+//         name1:document.getElementById("name1").value,
+//         fname:document.getElementById("fname").value
+//     }
+//     // console.log(std1)
+//     let key1 = firebase.database().ref('users/').push().key
+//     // console.log(key1)
+//     firebase.database().ref('users/').child(key1).set(std1)
+//     .then(function(){
+//         // console.log("data transmitted succcessfully")
+//     })
+//     .catch(function(e){
+//         // console.log(e.message())
+//     })    
+// }
 
 
 
 
-    firebase.database().ref('users/').on("value",function(data){
-        for(var keys in data.val()){
-            firebase.database().ref('users/'+keys).on("value",function(data1){
-                console.log(data1.val().name1)
-            })
+//     firebase.database().ref('users/').on("value",function(data){
+//         for(var keys in data.val()){
+//             firebase.database().ref('users/'+keys).on("value",function(data1){
+//                 console.log(data1.val().name1)
+//             })
             
-        }
-    })
+//         }
+//     })
     
 
 
-let remove = ()=>{
-    var remove = document.getElementById("remove").value
-    firebase.database().ref("users/"+remove).remove()    
+// let remove = ()=>{
+//     var remove = document.getElementById("remove").value
+//     firebase.database().ref("users/"+remove).remove()    
+// }
+
+
+// let edit = ()=>{
+//     console.log("edit")
+//     var edit = document.getElementById("edit").value
+//     console.log(edit)
+//     firebase.database().ref("users/"+edit).set({
+//         name1:"champion",
+//         fname:"champions father"
+//     })
+// }
+
+var firebase1 = firebase.database()
+
+
+let sendData = ()=>{
+    console.log("send data started")
+    var name1 = document.getElementById("name1")
+    var fname = document.getElementById("fname")
+    var key1 = firebase1.ref("users/").push().key
+    firebase1.ref("users/").child(key1).set({
+        key:key1,
+        name1:name1.value,
+        fname:fname.value
+    })
+    console.log(key1)
 }
 
+firebase1.ref("users/").on("value",function(data){
+    for(var keys in data.val()){
+        firebase1.ref("users/"+keys).on("value",function(data){
+            console.log(data.val().name1)
+        })
+       
+    }
+})
+
+let remove = ()=>{
+    var remove = document.getElementById("remove")
+    firebase1.ref("users/"+remove.value).remove()
+}
 
 let edit = ()=>{
-    console.log("edit")
-    var edit = document.getElementById("edit").value
-    console.log(edit)
-    firebase.database().ref("users/"+edit).set({
+    var edit = document.getElementById("edit")
+    firebase1.ref("users/"+edit.value).set({
+        keys:edit.value,
         name1:"champion",
-        fname:"champions father"
+        fname:"father of the champion"
     })
 }
