@@ -113,27 +113,44 @@ let sendData = ()=>{
         name1:document.getElementById("name1").value,
         fname:document.getElementById("fname").value
     }
-    console.log(std1)
+    // console.log(std1)
     let key1 = firebase.database().ref('users/').push().key
-    console.log(key1)
+    // console.log(key1)
     firebase.database().ref('users/').child(key1).set(std1)
     .then(function(){
-        console.log("data transmitted succcessfully")
+        // console.log("data transmitted succcessfully")
     })
     .catch(function(e){
-        console.log(e.message())
-    })
-    
+        // console.log(e.message())
+    })    
 }
 
 
 
-let getData = ()=>{
-    firebase.database().ref('users/').once("value",function(data){
-        let list = data.key
-        console.log(list)
-        // for(var i = 0; i<list.length;i++){
-        //     console.log(list[i])
-        // }
+
+    firebase.database().ref('users/').on("value",function(data){
+        for(var keys in data.val()){
+            firebase.database().ref('users/'+keys).on("value",function(data1){
+                console.log(data1.val().name1)
+            })
+            
+        }
+    })
+    
+
+
+let remove = ()=>{
+    var remove = document.getElementById("remove").value
+    firebase.database().ref("users/"+remove).remove()    
+}
+
+
+let edit = ()=>{
+    console.log("edit")
+    var edit = document.getElementById("edit").value
+    console.log(edit)
+    firebase.database().ref("users/"+edit).set({
+        name1:"champion",
+        fname:"champions father"
     })
 }
