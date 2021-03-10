@@ -155,41 +155,76 @@
 //     })
 // }
 
-var firebase1 = firebase.database()
+// var firebase1 = firebase.database()
 
+
+// let sendData = ()=>{
+//     console.log("send data started")
+//     var name1 = document.getElementById("name1")
+//     var fname = document.getElementById("fname")
+//     var key1 = firebase1.ref("users/").push().key
+//     firebase1.ref("users/").child(key1).set({
+//         key:key1,
+//         name1:name1.value,
+//         fname:fname.value
+//     })
+//     console.log(key1)
+// }
+
+// firebase1.ref("users/").on("value",function(data){
+//     for(var keys in data.val()){
+//         firebase1.ref("users/"+keys).on("value",function(data){
+//             console.log(data.val().name1)
+//         })
+       
+//     }
+// })
+
+// let remove = ()=>{
+//     var remove = document.getElementById("remove")
+//     firebase1.ref("users/"+remove.value).remove()
+// }
+
+// let edit = ()=>{
+//     var edit = document.getElementById("edit")
+//     firebase1.ref("users/"+edit.value).set({
+//         keys:edit.value,
+//         name1:"champion",
+//         fname:"father of the champion"
+//     })
+// }
+
+let firedb = firebase.database()
 
 let sendData = ()=>{
-    console.log("send data started")
     var name1 = document.getElementById("name1")
     var fname = document.getElementById("fname")
-    var key1 = firebase1.ref("users/").push().key
-    firebase1.ref("users/").child(key1).set({
+    var key1 = firedb.ref("users/").push().key
+    firedb.ref("users/").child(key1).set({
         key:key1,
         name1:name1.value,
         fname:fname.value
     })
-    console.log(key1)
+    .then(()=>{
+        console.log("data successfully sent")
+    })
 }
 
-firebase1.ref("users/").on("value",function(data){
-    for(var keys in data.val()){
-        firebase1.ref("users/"+keys).on("value",function(data){
-            console.log(data.val().name1)
-        })
-       
-    }
-})
+
+let getData = ()=>{
+    firedb.ref("users/").once("value",(data)=>{
+        for(var key in data.val()){
+            firedb.ref("users/"+key).once("value",(data)=>{
+                console.log(`name is ${data.val().name1} father name is ${data.val().fname} key is ${data.val().key}`)
+            })
+        }
+    })
+}
+
 
 let remove = ()=>{
     var remove = document.getElementById("remove")
-    firebase1.ref("users/"+remove.value).remove()
-}
-
-let edit = ()=>{
-    var edit = document.getElementById("edit")
-    firebase1.ref("users/"+edit.value).set({
-        keys:edit.value,
-        name1:"champion",
-        fname:"father of the champion"
-    })
+    console.log(remove.value)
+    firedb.ref("users/"+remove.value).remove()
+    // console.log("data removed successfully")
 }
