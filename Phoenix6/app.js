@@ -194,37 +194,80 @@
 //     })
 // }
 
-let firedb = firebase.database()
+// let firedb = firebase.database()
+
+// let sendData = ()=>{
+//     var name1 = document.getElementById("name1")
+//     var fname = document.getElementById("fname")
+//     var key1 = firedb.ref("users/").push().key
+//     firedb.ref("users/").child(key1).set({
+//         key:key1,
+//         name1:name1.value,
+//         fname:fname.value
+//     })
+//     .then(()=>{
+//         console.log("data successfully sent")
+//     })
+// }
+
+
+// let getData = ()=>{
+//     firedb.ref("users/").once("value",(data)=>{
+//         for(var key in data.val()){
+//             firedb.ref("users/"+key).once("value",(data)=>{
+//                 console.log(`name is ${data.val().name1} father name is ${data.val().fname} key is ${data.val().key}`)
+//             })
+//         }
+//     })
+// }
+
+
+// let remove = ()=>{
+//     var remove = document.getElementById("remove")
+//     console.log(remove.value)
+//     firedb.ref("users/"+remove.value).remove()
+//     // console.log("data removed successfully")
+// }
+
+
+
+var firebasedb = firebase.database()
+
 
 let sendData = ()=>{
+    var key = firebasedb.ref("users/").push().key;
     var name1 = document.getElementById("name1")
     var fname = document.getElementById("fname")
-    var key1 = firedb.ref("users/").push().key
-    firedb.ref("users/").child(key1).set({
-        key:key1,
+    firebasedb.ref("users/").child(key).set({
+        key:key,
         name1:name1.value,
         fname:fname.value
     })
-    .then(()=>{
-        console.log("data successfully sent")
+    .then(function(){
+        console.log("databse added")
+    })
+    .catch(function(err){
+        console.log(err.message)
     })
 }
 
 
+
+
 let getData = ()=>{
-    firedb.ref("users/").once("value",(data)=>{
-        for(var key in data.val()){
-            firedb.ref("users/"+key).once("value",(data)=>{
-                console.log(`name is ${data.val().name1} father name is ${data.val().fname} key is ${data.val().key}`)
+    firebasedb.ref("users/").once("value",function(data){
+        for(var keys in data.val())
+        {
+            firebasedb.ref("users/"+keys).once("value",function(data){
+                console.log(data.val().name1)
             })
         }
     })
 }
 
-
 let remove = ()=>{
     var remove = document.getElementById("remove")
-    console.log(remove.value)
-    firedb.ref("users/"+remove.value).remove()
-    // console.log("data removed successfully")
+    firebasedb.ref("users/"+remove.value).remove()
+    console.log("data removed")
 }
+
